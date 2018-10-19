@@ -1,0 +1,11 @@
+version: '2.1'
+volumes: 
+  citus_master: {}
+services:
+  master:
+    container_name: citus_master
+    image: 'citusdata/citus:7.5.1'
+    ports: ["5432:5432"]
+    labels: ['com.citusdata.role=Master']
+    volumes: 
+      - citus_master:/var/lib/postgresql/data
