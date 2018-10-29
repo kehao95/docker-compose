@@ -10,6 +10,6 @@ services:
     labels: ['com.citusdata.role=Master']
     volumes: 
       - citus_master:/var/lib/postgresql/data
-    environments:
+    environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=citus
