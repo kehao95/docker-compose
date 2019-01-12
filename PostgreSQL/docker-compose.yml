@@ -11,6 +11,7 @@ services:
       - 5432:5432
     volumes: 
       - postgresql:/var/lib/postgresql/data
+      - /var/run/postgresql:/var/run/postgresql
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
