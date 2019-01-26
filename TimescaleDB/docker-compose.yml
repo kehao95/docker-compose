@@ -1,0 +1,16 @@
+version: '3.1'
+volumes:
+  TimescaleDB: {}
+
+services:
+  timescale:
+    container_name: timescale
+    image: timescale/timescaledb:latest-pg11
+    restart: always
+    ports: 
+      - 5432:5432
+    volumes: 
+      - TimescaleDB:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
