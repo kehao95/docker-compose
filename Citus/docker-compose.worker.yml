@@ -4,7 +4,7 @@ volumes:
 services:
   worker:
     container_name: citus_worker
-    image: 'citusdata/citus:7.5.1'
+    image: 'citusdata/citus'
     ports: 
       - 5432:5432
     labels: ['com.citusdata.role=Worker']
